@@ -13,13 +13,13 @@ Gem::Specification.new do |s|
   s.description = %q{twitter-bootstrap-rails project integrates Bootstrap CSS toolkit for Rails 3.1 Asset Pipeline}
 
   s.rubyforge_project = "twitter-bootstrap-rails"
-  s.files = Dir["lib/**/*"] + Dir["vendor/**/*"] + ["Rakefile", "README.md"]
+  s.files = Dir["lib/**/*"] + Dir["vendor/**/*"] + Dir["app/**/*"] + ["Rakefile", "README.md"]
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
   s.add_dependency             'railties',   '>= 3.1'
   s.add_dependency             'actionpack', '>= 3.1'
-  s.add_runtime_dependency     'less-rails', '~> 2.1.6'
+  s.add_runtime_dependency     'less-rails', '~> 2.2.0'
   s.add_development_dependency 'rails', '>= 3.1'
 end

@@ -1,2 +1,3 @@
-= form_for @<%= resource_name %>, :html => { :class => "edit_<%= resource_name %> form-horizontal", :id => "edit_<%= resource_name %>" } do |f|
-  = render :partial => "form", :locals => {:f => f}
+- model_class = @<%= resource_name %>.class
+%h1=t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human, :default => "Edit #{model_class.model_name.human}")
+= render :partial => "form"
